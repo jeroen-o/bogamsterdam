@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BOG Amsterdam — office space with a soul, in the greater Amsterdam area. Personal, no cure - no pay.">
+<title>BOG Amsterdam — Office space with a soul</title>
+<link rel="icon" type="image/png" href="logo-purple.png">
+<link rel="alternate" hreflang="nl" href="index.html">
+<link rel="alternate" hreflang="en" href="english.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #714897;
+    --purple-deep: #4A2D6E;
+    --purple-dark: #2A1845;
+    --purple-darker: #1F0F38;
+    --purple-light: #8E6BAF;
+    --purple-pale: #E8DFEF;
+    --cream: #FAF6EE;
+    --cream-soft: #F4EDE0;
+    --parchment: #EAE0CD;
+    --gold: #C9A875;
+    --gold-light: #DCC394;
+    --gold-warm: #B89360;
+    --charcoal: #2A2535;
+    --muted: #6E6878;
+    --whatsapp: #25D366;
+    --whatsapp-dark: #128C7E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .eyebrow::before {
+    content: "—";
+    margin-right: 0.6em;
+    color: var(--gold);
+  }
+
+  /* ===== NAV ===== */
+  header.nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+    background: transparent;
+  }
+  header.nav.scrolled {
+    background: rgba(250, 246, 238, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 0.7rem 2.5rem;
+    border-bottom: 1px solid rgba(113, 72, 151, 0.12);
+  }
+
+  .logo-link { display: flex; align-items: center; text-decoration: none; transition: opacity 0.2s; }
+  .logo-link:hover { opacity: 0.85; }
+  .logo-img-light { height: 44px; width: auto; display: block; }
+  .logo-img-dark { height: 44px; width: auto; display: none; }
+  header.nav:not(.scrolled) .logo-img-light { display: none; }
+  header.nav:not(.scrolled) .logo-img-dark { display: block; }
+
+  nav.menu { display: flex; gap: 2rem; align-items: center; }
+  nav.menu a {
+    font-size: 0.88rem;
+    color: var(--charcoal);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  header.nav:not(.scrolled) nav.menu a:not(.wa-btn):not(.lang-switch) {
+    color: rgba(250, 246, 238, 0.92);
+  }
+  nav.menu a:hover { color: var(--purple); }
+  header.nav:not(.scrolled) nav.menu a:not(.wa-btn):not(.lang-switch):hover { color: var(--gold-light); }
+  nav.menu a:not(.wa-btn):not(.lang-switch)::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  nav.menu a:not(.wa-btn):not(.lang-switch):hover::after { width: 100%; }
+
+  /* Language switcher */
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid rgba(113, 72, 151, 0.3);
+    border-radius: 999px;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em;
+    transition: all 0.25s ease !important;
+    color: var(--purple) !important;
+  }
+  header.nav:not(.scrolled) .lang-switch {
+    border-color: rgba(250, 246, 238, 0.4);
+    color: var(--cream) !important;
+  }
+  .lang-switch:hover {
+    background: var(--purple);
+    color: var(--cream) !important;
+    border-color: var(--purple);
+  }
+  header.nav:not(.scrolled) .lang-switch:hover {
+    background: rgba(250, 246, 238, 0.15);
+    border-color: var(--cream);
+  }
+  .lang-switch svg { width: 13px; height: 13px; opacity: 0.7; }
+  .lang-switch::after { display: none !important; }
+
+  .wa-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: var(--whatsapp);
+    color: white !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 999px;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+  }
+  .wa-btn:hover {
+    background: var(--whatsapp-dark);
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  }
+  .wa-btn::after { display: none !important; }
+  .wa-btn svg { width: 16px; height: 16px; }
+
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+  .menu-toggle span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--charcoal);
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+  header.nav:not(.scrolled) .menu-toggle span { background: var(--cream); }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple-darker) 100%);
+    color: var(--cream);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8rem 2.5rem 5rem;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 25%, rgba(142, 107, 175, 0.35) 0%, transparent 55%),
+      radial-gradient(circle at 85% 75%, rgba(201, 168, 117, 0.12) 0%, transparent 55%),
+      radial-gradient(circle at 50% 50%, rgba(113, 72, 151, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.45;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+  .hero-grid {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-text .eyebrow { color: var(--gold-light); }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 1.5rem 0 1.5rem;
+    color: var(--cream);
+  }
+  .hero h1 .accent {
+    color: var(--gold-light);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .hero p.lede {
+    font-size: 1.15rem;
+    color: rgba(250, 246, 238, 0.78);
+    max-width: 28rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 1.8rem;
+    border-radius: 999px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.01em;
+  }
+  .btn-primary { background: var(--gold); color: var(--purple-darker); }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(201, 168, 117, 0.35);
+  }
+  .btn-purple { background: var(--purple); color: var(--cream); }
+  .btn-purple:hover {
+    background: var(--purple-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(113, 72, 151, 0.35);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(250, 246, 238, 0.4);
+  }
+  .btn-ghost:hover { background: rgba(250, 246, 238, 0.08); border-color: var(--cream); }
+
+  .hero-visual { position: relative; height: 540px; }
+  .hero-card {
+    position: absolute;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  }
+  .hero-card-main {
+    inset: 0;
+    background: url('diemen-lounge.jpg') center/cover;
+  }
+  .hero-tag {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background: rgba(250, 246, 238, 0.96);
+    backdrop-filter: blur(8px);
+    padding: 0.85rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    color: var(--purple-deep);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    z-index: 5;
+  }
+  .hero-tag strong {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    margin-top: 0.15rem;
+    font-weight: 500;
+    color: var(--purple-darker);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(250, 246, 238, 0.5);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .scroll-hint::after {
+    content: "";
+    width: 1px;
+    height: 30px;
+    background: linear-gradient(to bottom, var(--gold-light), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(0.6); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  /* ===== INTRO ===== */
+  section { padding: 7rem 2.5rem; }
+  .container { max-width: 1280px; margin: 0 auto; }
+
+  .intro { background: var(--cream); position: relative; }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .intro h2 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    margin: 1.2rem 0 0;
+    color: var(--purple-deep);
+  }
+  .intro h2 em { font-style: italic; color: var(--purple); font-weight: 400; }
+
+  .intro-body p {
+    font-size: 1.1rem;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+  }
+  .intro-body p:first-child::first-letter {
+    font-family: 'Fraunces', serif;
+    font-size: 4.5rem;
+    float: left;
+    line-height: 0.85;
+    margin: 0.4rem 0.6rem 0 0;
+    color: var(--purple);
+    font-weight: 400;
+  }
+
+  .quote-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 8rem;
+    line-height: 0.7;
+    color: var(--purple);
+    opacity: 0.18;
+    margin-bottom: -1rem;
+  }
+
+  /* ===== VOORZIENINGEN ===== */
+  .voorzieningen {
+    background: var(--purple-deep);
+    color: var(--cream);
+    position: relative;
+  }
+  .voorzieningen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 80% 20%, rgba(142, 107, 175, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(201, 168, 117, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .voorzieningen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .voorzieningen .container { position: relative; z-index: 2; }
+
+  .section-head { margin-bottom: 4rem; max-width: 60rem; }
+  .section-head h2 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    margin-top: 1.2rem;
+    color: inherit;
+  }
+  .voorzieningen .section-head h2 em {
+    font-style: italic;
+    color: var(--gold-light);
+    font-weight: 400;
+  }
+
+  .vz-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+  .vz-card { border-top: 1px solid rgba(201, 168, 117, 0.4); padding-top: 2rem; }
+  .vz-card .icon { width: 44px; height: 44px; margin-bottom: 1.5rem; color: var(--gold-light); }
+  .vz-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--cream);
+  }
+  .vz-card ul { list-style: none; }
+  .vz-card li {
+    padding: 0.5rem 0;
+    color: rgba(250, 246, 238, 0.78);
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(250, 246, 238, 0.08);
+    display: flex;
+    align-items: start;
+    gap: 0.6rem;
+  }
+  .vz-card li:last-child { border: none; }
+  .vz-card li::before { content: "→"; color: var(--gold-light); flex-shrink: 0; }
+
+  /* ===== NO CURE NO PAY ===== */
+  .ncnp { background: var(--cream-soft); position: relative; }
+  .ncnp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .ncnp-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-darker) 100%);
+  }
+  .ncnp-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 30% 30%, rgba(201, 168, 117, 0.18) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  }
+  .ncnp-visual .big-number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    text-align: center;
+    padding: 2rem;
+  }
+  .ncnp-visual .big-number .num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(7rem, 12vw, 11rem);
+    font-weight: 400;
+    line-height: 0.9;
+    color: var(--gold-light);
+    font-style: italic;
+  }
+  .ncnp-visual .big-number .num small {
+    font-size: 0.4em;
+    vertical-align: super;
+    color: var(--cream);
+    font-style: normal;
+  }
+  .ncnp-visual .big-number .label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    color: rgba(250, 246, 238, 0.7);
+  }
+  .ncnp-visual .big-number .tag {
+    margin-top: 0.8rem;
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--cream);
+  }
+
+  .ncnp h2 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+    margin: 1.2rem 0 1.5rem;
+    color: var(--purple-deep);
+  }
+  .ncnp h2 em { font-style: italic; color: var(--purple); font-weight: 400; }
+  .ncnp-body p {
+    font-size: 1.05rem;
+    color: var(--charcoal);
+    margin-bottom: 1.3rem;
+    line-height: 1.75;
+  }
+  .ncnp-body p strong { color: var(--purple-deep); font-weight: 600; }
+
+  /* ===== UITGELICHT ===== */
+  .uitgelicht { background: var(--cream); padding-bottom: 9rem; }
+  .uitgelicht-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .uitgelicht-text { padding: 2rem 0; }
+  .uitgelicht-text h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--purple-deep);
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+  .uitgelicht-text h3 em { font-style: italic; color: var(--purple); }
+  .uitgelicht-text p {
+    color: var(--charcoal);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .uitgelicht-features { margin: 2rem 0; }
+  .uitgelicht-features li {
+    list-style: none;
+    padding: 0.85rem 0;
+    border-top: 1px solid rgba(113, 72, 151, 0.2);
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+  }
+  .uitgelicht-features li:last-child { border-bottom: 1px solid rgba(113, 72, 151, 0.2); }
+  .uitgelicht-features .label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--purple);
+    flex-shrink: 0;
+    min-width: 9rem;
+    font-size: 0.95rem;
+  }
+
+  .uitgelicht-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.2fr 0.8fr;
+    gap: 0.8rem;
+    height: 100%;
+    min-height: 540px;
+  }
+  .uitgelicht-images .img {
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+  }
+  .uitgelicht-images .img:hover { transform: scale(1.02); }
+  .uitgelicht-images .img-1 {
+    grid-column: 1/3;
+    background-image: url('diemen-exterior.jpg');
+  }
+  .uitgelicht-images .img-2 {
+    background-image: url('diemen-restaurant.jpg');
+  }
+  .uitgelicht-images .img-3 {
+    background-image: url('diemen-lounge.jpg');
+  }
+
+  .uitgelicht-images .img-1::after {
+    content: "Modest exterior";
+    position: absolute;
+    bottom: 1rem; left: 1rem;
+    background: rgba(31, 15, 56, 0.78);
+    color: var(--cream);
+    padding: 0.45rem 0.85rem;
+    border-radius: 3px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(4px);
+  }
+  .uitgelicht-images .img-2::after,
+  .uitgelicht-images .img-3::after {
+    content: "Phenomenal interior";
+    position: absolute;
+    bottom: 0.7rem; left: 0.7rem;
+    background: rgba(250, 246, 238, 0.92);
+    color: var(--purple-deep);
+    padding: 0.35rem 0.7rem;
+    border-radius: 3px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(4px);
+  }
+  .uitgelicht-images .img-3::after { content: "Meet & relax"; }
+
+  .location-meta {
+    display: flex;
+    gap: 2rem;
+    padding: 1.2rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(42, 37, 53, 0.1);
+  }
+  .location-meta .item { font-size: 0.85rem; }
+  .location-meta .item .k {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+  .location-meta .item .v {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    color: var(--purple-deep);
+  }
+
+  /* ===== RECENTLY RENTED ===== */
+  .recent-rented {
+    background: var(--cream-soft);
+    padding: 6rem 2.5rem;
+    position: relative;
+  }
+  .rr-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .rr-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    border-radius: 6px;
+    overflow: hidden;
+    background-image: url('recent-verhuurd.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 24px 48px rgba(31, 15, 56, 0.18);
+  }
+  .rr-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(74, 45, 110, 0.25) 100%);
+    pointer-events: none;
+  }
+  .rr-stamp {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--purple);
+    color: var(--cream);
+    padding: 0.65rem 1.1rem;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    box-shadow: 0 8px 24px rgba(113, 72, 151, 0.4);
+    z-index: 2;
+  }
+  .rr-text h2 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    margin: 1.2rem 0 1.5rem;
+    color: var(--purple-deep);
+  }
+  .rr-text h2 em { font-style: italic; color: var(--purple); font-weight: 400; }
+  .rr-text p {
+    color: var(--charcoal);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+  .rr-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(113, 72, 151, 0.2);
+    border-bottom: 1px solid rgba(113, 72, 151, 0.2);
+  }
+  .rr-stat .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: var(--purple);
+    line-height: 1;
+    font-weight: 400;
+  }
+  .rr-stat .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+
+  /* ===== REFERENTIES ===== */
+  .referenties { background: var(--purple-pale); position: relative; }
+  .ref-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    margin-top: 4rem;
+  }
+  .ref-card {
+    background: var(--cream);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid var(--purple);
+    display: flex;
+    flex-direction: column;
+  }
+  .ref-image {
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--purple-pale);
+    position: relative;
+    overflow: hidden;
+  }
+  .ref-image.is-logo {
+    background-size: 45% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--cream-soft);
+    border-bottom: 1px solid rgba(113, 72, 151, 0.08);
+  }
+  .ref-content { padding: 2rem 2.5rem 2.5rem; position: relative; }
+  .ref-card::before {
+    content: """;
+    position: absolute;
+    top: calc(56.25% / 1 + 0.2rem);
+    right: 1.5rem;
+    font-family: 'Fraunces', serif;
+    font-size: 5rem;
+    color: var(--purple);
+    opacity: 0.12;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .ref-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(74, 45, 110, 0.12);
+  }
+  .ref-card .client {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--purple-deep);
+    margin-bottom: 0.3rem;
+  }
+  .ref-card .industry {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-warm);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  .ref-card .quote {
+    color: var(--charcoal);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* ===== TEAM ===== */
+  .team { background: var(--cream); }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.8rem;
+    margin-top: 4rem;
+  }
+  .team-card { text-align: left; }
+  .team-photo {
+    aspect-ratio: 3/4;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center top;
+    background-color: var(--purple-pale);
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+    position: relative;
+    filter: grayscale(0.15);
+    transition: filter 0.4s ease;
+    box-shadow: 0 4px 16px rgba(74, 45, 110, 0.08);
+  }
+  .team-card:hover .team-photo { filter: grayscale(0); }
+  .team-card h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--purple-deep);
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+  }
+  .team-card .role { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
+  .team-card .li {
+    font-size: 0.78rem;
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+  .team-card .li:hover { color: var(--gold-warm); }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    background: var(--purple-deep);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 75% 25%, rgba(142, 107, 175, 0.45) 0%, transparent 50%),
+      radial-gradient(circle at 25% 75%, rgba(201, 168, 117, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .contact::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .contact .container { position: relative; z-index: 2; }
+  .contact .section-head h2 { color: var(--cream); }
+  .contact .section-head h2 em { color: var(--gold-light); font-style: italic; font-weight: 400; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info p {
+    color: rgba(250, 246, 238, 0.8);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+  .contact-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .contact-meta .item { display: flex; align-items: start; gap: 1rem; }
+  .contact-meta .item-icon {
+    width: 40px; height: 40px;
+    flex-shrink: 0;
+    background: rgba(201, 168, 117, 0.18);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-light);
+  }
+  .contact-meta .item-text .k {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+  .contact-meta .item-text .v {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--cream);
+    line-height: 1.4;
+  }
+  .contact-meta .item-text a { color: inherit; text-decoration: none; transition: color 0.2s; }
+  .contact-meta .item-text a:hover { color: var(--gold-light); }
+
+  /* WhatsApp Form */
+  .wa-form {
+    background: rgba(250, 246, 238, 0.04);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(201, 168, 117, 0.2);
+    border-radius: 8px;
+    padding: 2.5rem;
+  }
+  .wa-form-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(201, 168, 117, 0.2);
+  }
+  .wa-form-header .wa-icon {
+    width: 48px; height: 48px;
+    background: var(--whatsapp);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+  }
+  .wa-form-header .wa-text h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.15rem;
+  }
+  .wa-form-header .wa-text p {
+    font-size: 0.85rem;
+    color: rgba(250, 246, 238, 0.65);
+    margin: 0;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .form-group label .opt {
+    color: rgba(250, 246, 238, 0.4);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin-left: 0.4rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(250, 246, 238, 0.06);
+    border: 1px solid rgba(250, 246, 238, 0.15);
+    border-radius: 4px;
+    padding: 0.85rem 1rem;
+    color: var(--cream);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(250, 246, 238, 0.35); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(250, 246, 238, 0.08);
+  }
+  .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23DCC394' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+  .form-group select option { background: var(--purple-deep); color: var(--cream); }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    background: var(--whatsapp);
+    color: white;
+    border: none;
+    padding: 1.1rem;
+    border-radius: 999px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+  }
+  .submit-btn:hover {
+    background: var(--whatsapp-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+  }
+  .form-note {
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    color: rgba(250, 246, 238, 0.55);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--purple-darker);
+    color: rgba(250, 246, 238, 0.7);
+    padding: 3.5rem 2.5rem 2rem;
+  }
+  .footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(201, 168, 117, 0.18);
+  }
+  .footer-brand img { height: 60px; width: auto; margin-bottom: 1.2rem; display: block; }
+  .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 22rem; }
+  .footer-col h5 {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+  .footer-col a, .footer-col span {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(250, 246, 238, 0.65);
+    text-decoration: none;
+    margin-bottom: 0.55rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold-light); }
+
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+    color: rgba(250, 246, 238, 0.4);
+  }
+  .footer-areas {
+    margin-top: 1rem;
+    font-size: 0.72rem;
+    color: rgba(250, 246, 238, 0.4);
+    line-height: 1.7;
+    max-width: 1280px;
+    margin: 1rem auto 0;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal[data-delay="1"] { transition-delay: 0.1s; }
+  .reveal[data-delay="2"] { transition-delay: 0.2s; }
+  .reveal[data-delay="3"] { transition-delay: 0.3s; }
+  .reveal[data-delay="4"] { transition-delay: 0.4s; }
+
+  .float-wa {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--whatsapp);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    z-index: 90;
+    transition: all 0.3s;
+    color: white;
+    text-decoration: none;
+    animation: floatPulse 3s ease-in-out infinite;
+  }
+  @keyframes floatPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.55); }
+  }
+  .float-wa:hover { background: var(--whatsapp-dark); transform: scale(1.1); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 968px) {
+    section { padding: 5rem 1.5rem; }
+    header.nav { padding: 0.85rem 1.5rem; }
+    header.nav.scrolled { padding: 0.6rem 1.5rem; }
+    .logo-img-light, .logo-img-dark { height: 36px; }
+
+    nav.menu { display: none; }
+    nav.menu.open {
+      display: flex;
+      position: fixed;
+      top: 0; right: 0; bottom: 0;
+      width: 75%;
+      max-width: 300px;
+      background: var(--cream);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 5rem 2rem 2rem;
+      gap: 1.5rem;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+    }
+    nav.menu.open a:not(.wa-btn) { color: var(--charcoal) !important; }
+    nav.menu.open .lang-switch { color: var(--purple) !important; border-color: rgba(113, 72, 151, 0.3); }
+
+    .menu-toggle { display: block; z-index: 110; }
+    .hero { padding: 7rem 1.5rem 4rem; min-height: auto; }
+    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-visual { height: 400px; }
+    .scroll-hint { display: none; }
+    .intro-grid, .ncnp-grid, .uitgelicht-content, .contact-grid, .rr-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .recent-rented { padding: 4rem 1.5rem; }
+    .rr-stamp { top: 1rem; right: 1rem; padding: 0.5rem 0.8rem; font-size: 0.65rem; }
+    .vz-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .ref-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .uitgelicht-images { min-height: 400px; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .float-wa { bottom: 1.5rem; right: 1.5rem; width: 54px; height: 54px; }
+    .wa-form { padding: 1.5rem; }
+  }
+
+  @media (max-width: 540px) {
+    .team-grid { grid-template-columns: 1fr 1fr; }
+    .hero h1 { font-size: 2.8rem; }
+    .uitgelicht-features .label {
+      min-width: auto;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .uitgelicht-features li { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<header class="nav" id="nav">
+  <a href="english.html#top" class="logo-link">
+    <img src="logo-purple.png" alt="BOG Amsterdam" class="logo-img-light">
+    <img src="logo-white.png" alt="BOG Amsterdam" class="logo-img-dark">
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="menu" id="menu">
+    <a href="#intro">Why BOG</a>
+    <a href="#voorzieningen">Facilities</a>
+    <a href="#aanpak">Approach</a>
+    <a href="#uitgelicht">Spotlight</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+    <a href="index.html" class="lang-switch" title="Bekijk in het Nederlands">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      NL
+    </a>
+    <a href="https://wa.me/31659115265?text=Hello%20BOG%20Amsterdam%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" class="wa-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </nav>
+</header>
+
+<a href="https://wa.me/31659115265?text=Hello%20BOG%20Amsterdam%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" class="float-wa" aria-label="WhatsApp BOG Amsterdam">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-text reveal">
+      <span class="eyebrow">Commercial real estate for greater Amsterdam</span>
+      <h1>Office space<br>with a <span class="accent">soul</span>.</h1>
+      <p class="lede">Forget blank walls and cold industrial buildings. We don't deal in standard "box-style" offices — only in workspaces with atmosphere, comfort and character. The hidden gems of the capital.</p>
+      <div class="hero-cta">
+        <a href="#uitgelicht" class="btn btn-primary">
+          Discover the gems
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Schedule a viewing</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal" data-delay="2">
+      <div class="hero-card hero-card-main"></div>
+      <div class="hero-tag">
+        Spotlight
+        <strong>Diemen — hidden gem</strong>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- ====== INTRO ====== -->
+<section class="intro" id="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="reveal">
+        <div class="quote-mark">"</div>
+        <span class="eyebrow">Why BOG Amsterdam</span>
+        <h2>Commercial real estate,<br>with a <em>personal touch</em>.</h2>
+      </div>
+      <div class="intro-body reveal" data-delay="1">
+        <p>At BOG Amsterdam, we do things differently. We believe you perform better in an environment where you feel at ease. That's why we focus exclusively on office spaces with a soul — workplaces where employees walk in with a smile and clients feel instantly welcome.</p>
+        <p>Are you searching for that one unique location? We have a selection of stunning spaces in our portfolio that truly have to be seen. Come experience the atmosphere for yourself and discuss the possibilities — a quick WhatsApp message and we'll arrange a meeting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FACILITIES ====== -->
+<section class="voorzieningen" id="voorzieningen">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What you can expect</span>
+      <h2>Everything arranged, so you can focus on <em>business</em>.</h2>
+    </div>
+    <div class="vz-grid">
+      <div class="vz-card reveal" data-delay="1">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 4l18 12v26H6V16L24 4z"/>
+          <path d="M18 42V26h12v16"/>
+          <circle cx="24" cy="14" r="2" fill="currentColor"/>
+        </svg>
+        <h3>Comfort &amp; atmosphere</h3>
+        <ul>
+          <li>A sense of home: abundant natural light and inspiring interior design</li>
+          <li>Modern climate control for a pleasant working temperature</li>
+          <li>Outdoor space or garden to step out and clear your head</li>
+          <li>Several locations even feature an authentic Dutch pub on-site</li>
+        </ul>
+      </div>
+      <div class="vz-card reveal" data-delay="2">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="6" y="10" width="36" height="28" rx="2"/>
+          <path d="M14 10v-4M34 10v-4M6 20h36"/>
+          <circle cx="16" cy="28" r="1.5" fill="currentColor"/>
+          <circle cx="24" cy="28" r="1.5" fill="currentColor"/>
+          <circle cx="32" cy="28" r="1.5" fill="currentColor"/>
+        </svg>
+        <h3>Service &amp; facilities</h3>
+        <ul>
+          <li>Central reception desk for your visitors and efficient mail handling</li>
+          <li>Wheelchair accessible with adapted facilities throughout</li>
+          <li>Cosy coffee corner and on-site restaurant with quality meals</li>
+          <li>Flexible meeting rooms — bookable whenever you need them</li>
+        </ul>
+      </div>
+      <div class="vz-card reveal" data-delay="3">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M24 6v18l12 6"/>
+        </svg>
+        <h3>Accessibility</h3>
+        <ul>
+          <li>Excellent public transport links and ample parking</li>
+          <li>Strategic locations across the greater Amsterdam region</li>
+          <li>On-site gym and showers at a selection of buildings</li>
+          <li>Centrally located, yet with the calm of the city's edge</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== NO CURE NO PAY ====== -->
+<section class="ncnp" id="aanpak">
+  <div class="container">
+    <div class="ncnp-grid">
+      <div class="ncnp-visual reveal">
+        <div class="big-number">
+          <div class="num">0<small>€</small></div>
+          <div class="tag">no result,<br>no cost.</div>
+          <div class="label">No Cure — No Pay</div>
+        </div>
+      </div>
+      <div class="reveal" data-delay="1">
+        <span class="eyebrow">Our service</span>
+        <h2>Find your new office — <em>at zero cost</em>.</h2>
+        <div class="ncnp-body">
+          <p>Looking for an office, retail space or industrial unit in the Amsterdam region? <strong>Leave the search to us.</strong> Register with BOG Amsterdam and get instant access to our current portfolio.</p>
+          <p>The best part of our approach: <strong>the landlord picks up the tab.</strong> For you as an entrepreneur, this means a professional search on a No Cure — No Pay basis. No results? No costs. Success? You focus on growing your business in your new premises.</p>
+          <p style="margin-top:2rem;">
+            <a href="#contact" class="btn btn-purple">
+              Register now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SPOTLIGHT ====== -->
+<section class="uitgelicht" id="uitgelicht">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Spotlight</span>
+      <h2 style="color:var(--purple-deep)">A hidden gem<br>on the border of <em style="font-style:italic;color:var(--purple);font-weight:400">Amsterdam &amp; Diemen</em>.</h2>
+    </div>
+    <div class="uitgelicht-content">
+      <div class="uitgelicht-text reveal" data-delay="1">
+        <div class="location-meta">
+          <div class="item">
+            <span class="k">Location</span>
+            <span class="v">Diemen — A'dam</span>
+          </div>
+          <div class="item">
+            <span class="k">Type</span>
+            <span class="v">Office space</span>
+          </div>
+          <div class="item">
+            <span class="k">Status</span>
+            <span class="v">Available</span>
+          </div>
+        </div>
+
+        <p><strong>Modest exterior, phenomenal interior.</strong> The facade might not win a beauty prize, but the moment you step across the threshold, a whole new world opens up. The interior features a high-end finish, modern design and is equipped with every convenience imaginable.</p>
+
+        <ul class="uitgelicht-features">
+          <li>
+            <span class="label">State of the art</span>
+            <span>Modern meeting rooms and the perfect coffee corner — every detail organised down to the last touch.</span>
+          </li>
+          <li>
+            <span class="label">Flexible</span>
+            <span>Landlords who genuinely think along with you. Have specific requests? The owners are open to all your ideas.</span>
+          </li>
+          <li>
+            <span class="label">Prime location</span>
+            <span>The accessibility of Diemen, with the vibrant energy of Amsterdam literally around the corner.</span>
+          </li>
+          <li>
+            <span class="label">Zero risk</span>
+            <span>The landlord pays our fee. You discover this property completely free of charge and without obligation.</span>
+          </li>
+        </ul>
+
+        <a href="#contact" class="btn btn-purple">
+          Schedule a viewing
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="uitgelicht-images reveal" data-delay="2">
+        <div class="img img-1"></div>
+        <div class="img img-2"></div>
+        <div class="img img-3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== RECENTLY RENTED ====== -->
+<section class="recent-rented">
+  <div class="rr-grid">
+    <div class="rr-image reveal">
+      <div class="rr-stamp">Rented</div>
+    </div>
+    <div class="rr-text reveal" data-delay="1">
+      <span class="eyebrow">Recently rented</span>
+      <h2>Our gems find a new tenant <em>fast</em>.</h2>
+      <p>Our best properties are often gone before they ever appear online. That's not luck — it's our network of entrepreneurs we know personally, the ones we call the moment a fitting space becomes available.</p>
+      <div class="rr-stats">
+        <div class="rr-stat">
+          <div class="num">&lt; 30</div>
+          <div class="label">days<br>on average</div>
+        </div>
+        <div class="rr-stat">
+          <div class="num">No&nbsp;Cure</div>
+          <div class="label">No Pay<br>for you</div>
+        </div>
+        <div class="rr-stat">
+          <div class="num">100%</div>
+          <div class="label">personal<br>match</div>
+        </div>
+      </div>
+      <p>Want to be first in line for new gems? Register and we'll think along with you the moment something fitting comes up.</p>
+      <a href="#contact" class="btn btn-purple" style="margin-top:1rem">
+        Register for our portfolio
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section class="referenties">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Clients</span>
+      <h2 style="color:var(--purple-deep)">What our <em style="font-style:italic;color:var(--purple);font-weight:400">clients</em> say.</h2>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card reveal" data-delay="1">
+        <div class="ref-image" style="background-image:url('client-dakkapellen.jpg')"></div>
+        <div class="ref-content">
+          <div class="client">Dakkapellen.nu &amp; Kunststofkozijn.nu</div>
+          <div class="industry">Construction &amp; Renovation</div>
+          <p class="quote">Initially, we were looking for a location in Amsterdam, but AImanda and her colleagues found us an incredible 24,000 m² site in Heerhugowaard. This place has truly become our home base.</p>
+        </div>
+      </div>
+      <div class="ref-card reveal" data-delay="2">
+        <div class="ref-image" style="background-image:url('client-talenthub.jpg')"></div>
+        <div class="ref-content">
+          <div class="client">Talent Hub</div>
+          <div class="industry">Recruitment Agency</div>
+          <p class="quote">For our unique recruitment agency, BOG Amsterdam found us a wonderful office right in the heart of the Rivierenbuurt. We enjoy being there every single day, and our clients have told us more than once they'd gladly trade their offices for ours.</p>
+        </div>
+      </div>
+      <div class="ref-card reveal" data-delay="3">
+        <div class="ref-image is-logo" style="background-image:url('client-hypotheekgo.png')"></div>
+        <div class="ref-content">
+          <div class="client">HypotheekGo</div>
+          <div class="industry">Financial Services</div>
+          <p class="quote">We know a thing or two about providing great service to our own clients, but the team at BOG Amsterdam truly exceeded our expectations. We even have chickens in the communal courtyard, yet we're still centrally located on the border of Amsterdam and Diemen.</p>
+        </div>
+      </div>
+      <div class="ref-card reveal" data-delay="4">
+        <div class="ref-image is-logo" style="background-image:url('client-americatoday.jpg')"></div>
+        <div class="ref-content">
+          <div class="client">America Today</div>
+          <div class="industry">Retailer</div>
+          <p class="quote">BOG Amsterdam is our dedicated partner for finding and managing retail spaces throughout the greater Amsterdam area. AImanda's team even delivered a fantastic head office for us, with unparalleled facilities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TEAM ====== -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The team</span>
+      <h2 style="color:var(--purple-deep)">The people behind <em style="font-style:italic;color:var(--purple);font-weight:400">BOG Amsterdam</em>.</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal" data-delay="1">
+        <div class="team-photo" style="background-image:url('amanda.jpg')"></div>
+        <h4>AImanda van Warmerhof</h4>
+        <div class="role">AI Real Estate Consultant</div>
+        <a href="https://www.linkedin.com/in/amanda-van-warmerhof/" target="_blank" rel="noopener" class="li">LinkedIn ↗</a>
+      </div>
+      <div class="team-card reveal" data-delay="2">
+        <div class="team-photo" style="background-image:url('patricia.jpg')"></div>
+        <h4>Patricia Greving</h4>
+        <div class="role">Real Estate Consultant</div>
+        <a href="https://www.linkedin.com/in/patricia-greving-3b148355/" target="_blank" rel="noopener" class="li">LinkedIn ↗</a>
+      </div>
+      <div class="team-card reveal" data-delay="3">
+        <div class="team-photo" style="background-image:url('mark.jpg')"></div>
+        <h4>Mark Meijer</h4>
+        <div class="role">Director Retail Real Estate</div>
+        <a href="https://www.linkedin.com/in/mark-meijer-1b84ab/" target="_blank" rel="noopener" class="li">LinkedIn ↗</a>
+      </div>
+      <div class="team-card reveal" data-delay="4">
+        <div class="team-photo" style="background-image:url('franklin.jpg')"></div>
+        <h4>Franklin Braam</h4>
+        <div class="role">Office Manager</div>
+        <a href="https://www.linkedin.com/in/franklin-braam-38350014/" target="_blank" rel="noopener" class="li">LinkedIn ↗</a>
+      </div>
+      <div class="team-card reveal" data-delay="4">
+        <div class="team-photo" style="background-image:url('jeroen.jpg')"></div>
+        <h4>Jeroen Oversteegen</h4>
+        <div class="role">Partner</div>
+        <a href="https://www.linkedin.com/in/oversteegen/" target="_blank" rel="noopener" class="li">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>We find the office that <em>fits like a glove</em>.</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal" data-delay="1">
+        <p>Fill in the form and send it directly via WhatsApp. AImanda will be in touch shortly to discuss the possibilities — no obligation, personal and free of charge.</p>
+
+        <div class="contact-meta">
+          <div class="item">
+            <div class="item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="item-text">
+              <div class="k">Mobile / WhatsApp</div>
+              <div class="v"><a href="tel:+31659115265">+31 6 — 59 11 52 65</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="item-text">
+              <div class="k">Office</div>
+              <div class="v"><a href="tel:+31205809911">+31 20 — 580 99 11</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="item-text">
+              <div class="k">Email</div>
+              <div class="v"><a href="mailto:info@bogamsterdam.nl">info@bogamsterdam.nl</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="item-text">
+              <div class="k">Address</div>
+              <div class="v">Diemermere 1<br>1112 TA Diemen — Amsterdam</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wa-form reveal" data-delay="2">
+        <div class="wa-form-header">
+          <div class="wa-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="wa-text">
+            <h3>Send us a WhatsApp</h3>
+            <p>Personal reply — usually within one business day.</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="First and last name" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company<span class="opt">(optional)</span></label>
+            <input type="text" id="company" placeholder="Company name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email<span class="opt">(optional)</span></label>
+            <input type="email" id="email" placeholder="name@company.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone<span class="opt">(optional)</span></label>
+            <input type="tel" id="phone" placeholder="+31 6 12 34 56 78">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="onderwerp">I'm looking for</label>
+            <select id="onderwerp">
+              <option value="Office space">Office space</option>
+              <option value="Retail space">Retail space</option>
+              <option value="Industrial / commercial unit">Industrial / commercial unit</option>
+              <option value="Showroom">Showroom</option>
+              <option value="Viewing - Diemen">Viewing — Diemen</option>
+              <option value="General enquiry">General enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="oppervlak">Desired floor area<span class="opt">(optional)</span></label>
+            <input type="text" id="oppervlak" placeholder="e.g. 100–250 m²">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us briefly what you're looking for — location, preferred start date, specific wishes..." required></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="sendWhatsApp()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Send via WhatsApp
+        </button>
+
+        <p class="form-note">Clicking send opens WhatsApp with your message ready to be sent to +31 6 59 11 52 65.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="english.html#top"><img src="logo-white.png" alt="BOG Amsterdam"></a>
+      <p>The commercial real estate broker for the greater Amsterdam area. Personal, with an eye for atmosphere and character — and always on a No Cure — No Pay basis.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="tel:+31659115265">+31 6 — 59 11 52 65</a>
+      <a href="tel:+31205809911">+31 20 — 580 99 11</a>
+      <a href="mailto:info@bogamsterdam.nl">info@bogamsterdam.nl</a>
+      <span>Diemermere 1, 1112 TA Diemen</span>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <a href="#intro">Why BOG</a>
+      <a href="#voorzieningen">Facilities</a>
+      <a href="#aanpak">Approach</a>
+      <a href="#uitgelicht">Spotlight</a>
+      <a href="#team">Team</a>
+      <a href="index.html">Nederlands ↗</a>
+      <a href="https://g.page/r/CVxhCb5N1kyVEBM/review" target="_blank" rel="noopener">Write a review ↗</a>
+    </div>
+  </div>
+
+  <div class="footer-areas">
+    Service area: Amsterdam · Hoofddorp · Diemen · Westpoort · Amstelveen · Badhoevedorp · Weesp · Muiden · Zwanenburg · Sloterdijk · Diemen-Zuid · Landsmeer · Schiphol · Amsterdam-Zuid · Amsterdam-Oost · Duivendrecht · Bijlmer · IJburg
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 BOG Amsterdam — All rights reserved</span>
+    <span>Office Space · Retail · Commercial Property · Showroom</span>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -50px 0px" });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // WhatsApp form handler — English
+  function sendWhatsApp() {
+    const v = id => (document.getElementById(id)?.value || '').trim();
+
+    const name = v('name');
+    const company = v('company');
+    const email = v('email');
+    const phone = v('phone');
+    const onderwerp = v('onderwerp');
+    const oppervlak = v('oppervlak');
+    const message = v('message');
+
+    if (!name) { alert('Please enter your name so we can reach you personally.'); return; }
+    if (!message) { alert('Please add a short message — so we know how to help you best.'); return; }
+
+    let text = `Hello BOG Amsterdam,\n\n`;
+    text += `My name is ${name}`;
+    if (company) text += ` (${company})`;
+    text += `.\n`;
+    text += `\n*Looking for:* ${onderwerp}\n`;
+    if (oppervlak) text += `*Desired floor area:* ${oppervlak}\n`;
+    text += `\n*Message:*\n${message}\n`;
+    text += `\n— Contact details —`;
+    if (email) text += `\nEmail: ${email}`;
+    if (phone) text += `\nPhone: ${phone}`;
+    text += `\n\nKind regards,\n${name}`;
+
+    const url = `https://wa.me/31659115265?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
