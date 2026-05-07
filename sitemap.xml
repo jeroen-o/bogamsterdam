@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://bogamsterdam.nl/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bogamsterdam.nl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bogamsterdam.nl/english.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bogamsterdam.nl/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_1.jpeg</image:loc>
+      <image:caption>Diemermere 1 — kantoorruimte op de grens van Amsterdam en Diemen</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://bogamsterdam.nl/english.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bogamsterdam.nl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bogamsterdam.nl/english.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bogamsterdam.nl/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bogamsterdam.nl/alle-fotos.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bogamsterdam.nl/alle-fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bogamsterdam.nl/all-photos.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_1.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_06.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_3.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_4.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_5.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_6.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_7.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_8.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_9.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_10.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_11.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_12.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_13.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_08.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_08_1.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_08_2.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_08_3.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_08_4.jpeg</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://bogamsterdam.nl/all-photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://bogamsterdam.nl/alle-fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bogamsterdam.nl/all-photos.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

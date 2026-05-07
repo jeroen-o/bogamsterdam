@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bekijk alle 19 foto's van Diemermere 1 in Diemen — werkplekken, vergaderzalen, design thinking studio, bedrijfsrestaurant en meer. Bezichtiging plannen via BOG Amsterdam.">
+<link rel="alternate" hreflang="nl" href="https://bogamsterdam.nl/alle-fotos.html">
+<link rel="alternate" hreflang="en" href="https://bogamsterdam.nl/all-photos.html">
+<link rel="alternate" hreflang="x-default" href="https://bogamsterdam.nl/">
+<title>Alle foto's — Diemermere 1 · Kantoorruimte Diemen | BOG Amsterdam</title>
+<link rel="icon" type="image/png" href="logopurple.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #714897;
+    --purple-deep: #4A2D6E;
+    --purple-dark: #2A1845;
+    --purple-darker: #1F0F38;
+    --purple-light: #8E6BAF;
+    --purple-pale: #E8DFEF;
+    --cream: #FAF6EE;
+    --cream-soft: #F4EDE0;
+    --parchment: #EAE0CD;
+    --gold: #C9A875;
+    --gold-light: #DCC394;
+    --gold-warm: #B89360;
+    --charcoal: #2A2535;
+    --muted: #6E6878;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+
+  .eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .eyebrow::before { content: "—"; margin-right: 0.6em; color: var(--gold); }
+
+  /* ===== NAV ===== */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.9rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250, 246, 238, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(113, 72, 151, 0.12);
+  }
+  .logo-link { display: flex; align-items: center; text-decoration: none; transition: opacity 0.2s; }
+  .logo-link:hover { opacity: 0.85; }
+  .logo-img { height: 40px; width: auto; display: block; }
+
+  .nav-actions { display: flex; align-items: center; gap: 1.2rem; }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--purple-deep);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--purple); }
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 3px;
+    border: 1px solid rgba(113, 72, 151, 0.18);
+    transition: all 0.2s;
+  }
+  .lang-switch:hover { color: var(--purple); border-color: var(--purple); }
+
+  /* ===== HERO ===== */
+  .gallery-hero {
+    padding: 4rem 0 3rem;
+    text-align: center;
+    background: var(--cream);
+  }
+  .gallery-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    color: var(--purple-deep);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 1rem 0 1.2rem;
+  }
+  .gallery-hero h1 em { font-style: italic; color: var(--purple); }
+  .gallery-hero .lede {
+    max-width: 36rem;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .gallery-hero .meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(113, 72, 151, 0.08);
+    border-radius: 3px;
+    color: var(--purple-deep);
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+  .gallery-hero .meta svg { color: var(--purple); }
+
+  /* ===== CATEGORY SECTION ===== */
+  .gallery-section { padding: 3rem 0; }
+  .gallery-section + .gallery-section { padding-top: 2rem; }
+
+  .section-head {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(113, 72, 151, 0.18);
+    padding-bottom: 1rem;
+  }
+  .section-head h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 400;
+    color: var(--purple-deep);
+    letter-spacing: -0.01em;
+  }
+  .section-head h2 em { font-style: italic; color: var(--purple); }
+  .section-head .count {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== GALLERY GRID ===== */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.7rem;
+  }
+
+  .photo {
+    aspect-ratio: 4/3;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 2px 10px rgba(31, 15, 56, 0.08);
+    grid-column: span 4;
+  }
+  .photo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(31, 15, 56, 0.18);
+  }
+  .photo.feature { grid-column: span 12; aspect-ratio: 21/9; }
+  .photo.span-6 { grid-column: span 6; }
+  .photo.span-8 { grid-column: span 8; }
+  .photo.span-4 { grid-column: span 4; }
+  .photo.tall { aspect-ratio: 3/4; }
+
+  .photo .caption {
+    position: absolute;
+    bottom: 0.7rem;
+    left: 0.7rem;
+    background: rgba(31, 15, 56, 0.78);
+    color: var(--cream);
+    padding: 0.35rem 0.75rem;
+    border-radius: 3px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.8rem;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .photo:hover .caption { opacity: 1; transform: translateY(0); }
+  .photo .zoom-icon {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(250, 246, 238, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple-deep);
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.3s, transform 0.3s;
+    backdrop-filter: blur(4px);
+  }
+  .photo:hover .zoom-icon { opacity: 1; transform: scale(1); }
+
+  /* ===== CTA ===== */
+  .gallery-cta-section {
+    background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple-dark) 100%);
+    color: var(--cream);
+    padding: 4.5rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .gallery-cta-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .gallery-cta-section h2 em { font-style: italic; color: var(--gold-light); }
+  .gallery-cta-section p {
+    max-width: 30rem;
+    margin: 0 auto 2rem;
+    color: rgba(250, 246, 238, 0.82);
+    font-size: 1.02rem;
+  }
+  .cta-buttons { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.8rem;
+    background: var(--gold);
+    color: var(--purple-darker);
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s;
+  }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(201, 168, 117, 0.32);
+  }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.8rem;
+    background: transparent;
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(250, 246, 238, 0.4);
+    transition: all 0.25s;
+  }
+  .btn-ghost:hover {
+    background: rgba(250, 246, 238, 0.08);
+    border-color: rgba(250, 246, 238, 0.7);
+  }
+
+  /* ===== FOOTER ===== */
+  footer.foot {
+    background: var(--purple-darker);
+    color: rgba(250, 246, 238, 0.78);
+    padding: 3rem 2rem 1.5rem;
+  }
+  .foot-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .foot h5 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .foot a {
+    display: block;
+    color: rgba(250, 246, 238, 0.78);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+    font-size: 0.92rem;
+  }
+  .foot a:hover { color: var(--cream); }
+  .foot span { font-size: 0.92rem; display: block; margin-bottom: 0.5rem; }
+  .foot-bottom {
+    max-width: 1280px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(250, 246, 238, 0.12);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.82rem;
+    color: rgba(250, 246, 238, 0.55);
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 8, 28, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(250, 246, 238, 0.12);
+    border: 1px solid rgba(250, 246, 238, 0.2);
+    color: var(--cream);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .lightbox-close:hover { background: rgba(250, 246, 238, 0.2); transform: scale(1.05); }
+  .lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(250, 246, 238, 0.12);
+    border: 1px solid rgba(250, 246, 238, 0.2);
+    color: var(--cream);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .lightbox-arrow:hover { background: rgba(250, 246, 238, 0.22); }
+  .lightbox-arrow.prev { left: 1.5rem; }
+  .lightbox-arrow.next { right: 1.5rem; }
+  .lightbox-caption {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(250, 246, 238, 0.85);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    background: rgba(15, 8, 28, 0.55);
+    padding: 0.5rem 1.2rem;
+    border-radius: 3px;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    max-width: 90%;
+  }
+  .lightbox-counter {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    color: rgba(250, 246, 238, 0.65);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    background: rgba(15, 8, 28, 0.55);
+    padding: 0.4rem 0.9rem;
+    border-radius: 3px;
+    backdrop-filter: blur(8px);
+  }
+
+  body.lightbox-open { overflow: hidden; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .photo { grid-column: span 6; }
+    .photo.feature { grid-column: span 12; aspect-ratio: 16/10; }
+    .photo.span-6, .photo.span-8 { grid-column: span 6; }
+    .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
+    header.nav { padding: 0.7rem 1.2rem; }
+    .container { padding: 0 1.2rem; }
+  }
+  @media (max-width: 600px) {
+    .photo { grid-column: span 12; }
+    .photo.span-6, .photo.span-8, .photo.span-4 { grid-column: span 12; }
+    .gallery-hero { padding: 2.5rem 0 2rem; }
+    .nav-actions .back-link span { display: none; }
+    .lightbox { padding: 1rem; }
+    .lightbox-arrow.prev { left: 0.6rem; }
+    .lightbox-arrow.next { right: 0.6rem; }
+    .lightbox-arrow { width: 40px; height: 40px; }
+    .lightbox-caption { font-size: 0.82rem; bottom: 0.8rem; }
+  }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+
+<!-- ============= SEO / Open Graph / Twitter / Geo ============= -->
+<link rel="canonical" href="https://bogamsterdam.nl/alle-fotos.html">
+
+<!-- Geo signals -->
+<meta name="geo.region" content="NL-NH">
+<meta name="geo.placename" content="Diemen, Amsterdam">
+<meta name="geo.position" content="52.3422;4.9544">
+<meta name="ICBM" content="52.3422, 4.9544">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="BOG Amsterdam">
+<meta property="og:title" content="Alle foto's — Diemermere 1, Diemen">
+<meta property="og:description" content="Buitenkant bescheiden, binnenkant fenomenaal. Een rondleiding in 19 foto's door deze kantoorruimte op de grens van Amsterdam en Diemen.">
+<meta property="og:url" content="https://bogamsterdam.nl/alle-fotos.html">
+<meta property="og:image" content="https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_1.jpeg">
+<meta property="og:image:width" content="1036">
+<meta property="og:image:height" content="784">
+<meta property="og:image:alt" content="Diemermere 1 — kantoorruimte op de grens van Amsterdam en Diemen">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alle foto's — Diemermere 1, Diemen">
+<meta name="twitter:description" content="Buitenkant bescheiden, binnenkant fenomenaal. Een rondleiding in 19 foto's door deze kantoorruimte op de grens van Amsterdam en Diemen.">
+<meta name="twitter:image" content="https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_1.jpeg">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["RealEstateAgent", "LocalBusiness"],
+  "@id": "https://bogamsterdam.nl/#organization",
+  "name": "BOG Amsterdam",
+  "alternateName": "BOG Amsterdam — Bedrijfsmakelaar",
+  "description": "Persoonlijke bedrijfsmakelaar voor groot Amsterdam. Kantoorruimte, winkelruimte, bedrijfsruimte en showrooms — altijd op basis van No Cure — No Pay.",
+  "url": "https://bogamsterdam.nl/",
+  "logo": "https://bogamsterdam.nl/logopurple.png",
+  "image": "https://bogamsterdam.nl/WhatsApp_Image_20260331_at_19_32_07_1.jpeg",
+  "telephone": "+31205602602",
+  "email": "info@bogamsterdam.nl",
+  "priceRange": "No Cure — No Pay",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Diemermere 1",
+    "postalCode": "1112 TA",
+    "addressLocality": "Diemen",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3422,
+    "longitude": 4.9544
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Amsterdam"},
+    {"@type": "City", "name": "Diemen"},
+    {"@type": "City", "name": "Hoofddorp"},
+    {"@type": "City", "name": "Amstelveen"},
+    {"@type": "City", "name": "Badhoevedorp"},
+    {"@type": "City", "name": "Weesp"},
+    {"@type": "City", "name": "Muiden"},
+    {"@type": "City", "name": "Duivendrecht"},
+    {"@type": "City", "name": "Landsmeer"},
+    {"@type": "City", "name": "Zwanenburg"}
+  ],
+  "sameAs": [
+    "https://g.page/r/CVxhCb5N1kyVEBM/review"
+  ],
+  "knowsLanguage": ["nl", "en"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://bogamsterdam.nl/#website",
+  "url": "https://bogamsterdam.nl/",
+  "name": "BOG Amsterdam",
+  "publisher": {"@id": "https://bogamsterdam.nl/#organization"},
+  "inLanguage": "nl-NL"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Diemermere 1 — Sfeer & ruimtes",
+  "description": "Volledige fotorondleiding door Diemermere 1 in Diemen, een kantoorruimte met sfeer en karakter.",
+  "url": "https://bogamsterdam.nl/alle-fotos.html",
+  "inLanguage": "nl-NL",
+  "isPartOf": {"@id": "https://bogamsterdam.nl/#website"},
+  "about": {
+    "@type": "Place",
+    "name": "Diemermere 1",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Diemermere 1",
+      "postalCode": "1112 TA",
+      "addressLocality": "Diemen",
+      "addressCountry": "NL"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bogamsterdam.nl/"},
+    {"@type": "ListItem", "position": 2, "name": "Uitgelicht — Diemermere 1", "item": "https://bogamsterdam.nl/#uitgelicht"},
+    {"@type": "ListItem", "position": 3, "name": "Alle foto's"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="logo-link">
+    <img src="logopurple.png" alt="BOG Amsterdam" class="logo-img">
+  </a>
+  <div class="nav-actions">
+    <a href="index.html#uitgelicht" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>Terug naar homepage</span>
+    </a>
+    <a href="all-photos.html" class="lang-switch" title="View in English">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      EN
+    </a>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="gallery-hero">
+  <div class="container">
+    <span class="eyebrow">Sfeer & ruimtes</span>
+    <h1>Een rondleiding<br>door <em>Diemermere 1</em>.</h1>
+    <p class="lede">Buitenkant bescheiden, binnenkant fenomenaal. Bekijk hieronder alle ruimtes — van werkplekken en vergaderzalen tot het bedrijfsrestaurant en de breakout zones.</p>
+    <div class="meta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Diemermere 1 · 1112 TA Diemen — Amsterdam
+    </div>
+  </div>
+</section>
+
+<!-- ====== HET PAND ====== -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Het <em>pand</em></h2>
+      <span class="count">1 foto</span>
+    </div>
+    <div class="photo-grid">
+      <div class="photo feature reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_1.jpeg" data-caption="Diemermere 1 — bescheiden buitenkant op de grens van Diemen en Amsterdam">
+        <div class="caption">Bescheiden buitenkant</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WERKPLEKKEN ====== -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Werkplekken &amp; <em>kantoren</em></h2>
+      <span class="count">5 foto's</span>
+    </div>
+    <div class="photo-grid">
+      <div class="photo span-8 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_5.jpeg" data-caption="Lichte werkkamer met zicht op het groen">
+        <div class="caption">Werkkamer</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_6.jpeg" data-caption="Converse Workspace — moderne kantoorruimte">
+        <div class="caption">Converse Workspace</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_7.jpeg" data-caption="Focusruimte — stilte om te concentreren">
+        <div class="caption">Focusruimte</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_3.jpeg" data-caption="Werkkamer met houten vergadertafel">
+        <div class="caption">Werkkamer</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_08_3.jpeg" data-caption="Directiekanaal — Goud &amp; Marmer Suite">
+        <div class="caption">Directiekanaal</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== VERGADEREN & CREEEREN ====== -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Vergaderen &amp; <em>creëren</em></h2>
+      <span class="count">6 foto's</span>
+    </div>
+    <div class="photo-grid">
+      <div class="photo span-6 reveal" data-img="WhatsApp_Image_20260331_at_19_32_08_4.jpeg" data-caption="Vergaderkamer A — Natuurlijk Leiderschap, met live-edge tafel">
+        <div class="caption">Vergaderkamer A</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-6 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_8.jpeg" data-caption="Design Thinking Studio — innovatie en samenwerking">
+        <div class="caption">Design Thinking Studio</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_4.jpeg" data-caption="Project room met whiteboard — voor brainstormsessies">
+        <div class="caption">Project room</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_08.jpeg" data-caption="Creatieve Ideatie-Studio — voor brainstorms en mind mapping">
+        <div class="caption">Creatieve Ideatie-Studio</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_08_1.jpeg" data-caption="Samenwerkingsbibliotheek — werken tussen de boeken">
+        <div class="caption">Samenwerkingsbibliotheek</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-6 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_13.jpeg" data-caption="Tech-start-up Huddle Zone — informeel overleg">
+        <div class="caption">Tech-start-up Huddle Zone</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-6 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_10.jpeg" data-caption="HR Interview &amp; Privacy Ruimte — discreet en professioneel">
+        <div class="caption">HR Interview &amp; Privacy</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FACILITEITEN ====== -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Faciliteiten &amp; <em>infrastructuur</em></h2>
+      <span class="count">3 foto's</span>
+    </div>
+    <div class="photo-grid">
+      <div class="photo reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_11.jpeg" data-caption="IT Server-ruimte — eigen infrastructuur in het pand">
+        <div class="caption">IT Server-ruimte</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_12.jpeg" data-caption="Project Monitoring &amp; Data Centre — overzicht in real-time">
+        <div class="caption">Project Monitoring</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo reveal" data-img="WhatsApp_Image_20260331_at_19_32_08_2.jpeg" data-caption="Archief &amp; Postverwerking — alles netjes geregeld">
+        <div class="caption">Archief &amp; Post</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ONTSPANNING & DINEREN ====== -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Ontspanning &amp; <em>dineren</em></h2>
+      <span class="count">3 foto's</span>
+    </div>
+    <div class="photo-grid">
+      <div class="photo span-8 reveal" data-img="WhatsApp_Image_20260331_at_19_32_06.jpeg" data-caption="Bedrijfsrestaurant — uitgebreid lunchaanbod onder één dak">
+        <div class="caption">Bedrijfsrestaurant</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-4 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07.jpeg" data-caption="Breakout zone — koffiecorner met tafelvoetbal">
+        <div class="caption">Breakout zone</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="photo span-12 reveal" data-img="WhatsApp_Image_20260331_at_19_32_07_9.jpeg" data-caption="Breakout Zone &amp; Café — even bijkomen tussen de bedrijven door">
+        <div class="caption">Breakout &amp; Café</div>
+        <div class="zoom-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="gallery-cta-section">
+  <h2>Zin om het pand <em>in het echt</em> te zien?</h2>
+  <p>Plan vrijblijvend een bezichtiging — persoonlijk, ontspannen en op basis van No Cure — No Pay.</p>
+  <div class="cta-buttons">
+    <a href="index.html#contact" class="btn-primary">
+      Plan een bezichtiging
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <a href="https://wa.me/31659115265?text=Hallo%20BOG%20Amsterdam%2C%20ik%20zou%20graag%20Diemermere%201%20bezichtigen." target="_blank" rel="noopener" class="btn-ghost">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="foot">
+  <div class="foot-grid">
+    <div>
+      <h5>BOG Amsterdam</h5>
+      <p style="font-size:0.92rem;line-height:1.6;max-width:24rem;">Persoonlijke bedrijfsmakelaar voor groot Amsterdam. Met oog voor sfeer en karakter — en altijd op basis van No Cure — No Pay.</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <a href="tel:+31205602602">020 — 560 26 02</a>
+      <a href="tel:+31659115265">06 — 59 11 52 65</a>
+      <a href="mailto:info@bogamsterdam.nl">info@bogamsterdam.nl</a>
+      <span>Diemermere 1, 1112 TA Diemen</span>
+    </div>
+    <div>
+      <h5>Navigeer</h5>
+      <a href="index.html">Homepage</a>
+      <a href="index.html#uitgelicht">Uitgelicht</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="all-photos.html">English ↗</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 BOG Amsterdam — Alle rechten voorbehouden</span>
+    <span>Office Space · Retail · Commercial Property · Showroom</span>
+  </div>
+</footer>
+
+<!-- ====== LIGHTBOX ====== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto vergroot">
+  <button class="lightbox-close" id="lbClose" aria-label="Sluiten">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-arrow prev" id="lbPrev" aria-label="Vorige foto">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-arrow next" id="lbNext" aria-label="Volgende foto">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="lightbox-counter" id="lbCounter">1 / 19</div>
+  <img id="lbImg" src="" alt="">
+  <div class="lightbox-caption" id="lbCaption"></div>
+</div>
+
+<script>
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Lightbox logic
+  const photos = Array.from(document.querySelectorAll('.photo[data-img]'));
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbCounter = document.getElementById('lbCounter');
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const photo = photos[index];
+    lbImg.src = photo.dataset.img;
+    lbImg.alt = photo.dataset.caption || '';
+    lbCaption.textContent = photo.dataset.caption || '';
+    lbCounter.textContent = `${index + 1} / ${photos.length}`;
+    lb.classList.add('active');
+    document.body.classList.add('lightbox-open');
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('active');
+    document.body.classList.remove('lightbox-open');
+  }
+
+  function navigate(direction) {
+    currentIndex = (currentIndex + direction + photos.length) % photos.length;
+    openLightbox(currentIndex);
+  }
+
+  photos.forEach((photo, i) => {
+    photo.addEventListener('click', () => openLightbox(i));
+  });
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', () => navigate(-1));
+  document.getElementById('lbNext').addEventListener('click', () => navigate(1));
+
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navigate(-1);
+    if (e.key === 'ArrowRight') navigate(1);
+  });
+</script>
+
+</body>
+</html>
